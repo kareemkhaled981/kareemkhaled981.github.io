@@ -1,0 +1,304 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Kareem Khaled - Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        /* General Styling */
+        body {
+            background-color: #042443; /* Set background color */
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        @font-face {
+            font-family: 'Agrandir';
+            src: url("images/AgrandirTextBold.otf") format('otf') ; 
+        }
+
+        h2 {
+            font-family:'Agrandir';
+            text-align: center;
+        }
+        section {
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: start;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+        
+
+        /* About Me Section */
+        #about {
+            text-align: center;
+        }
+
+        /* Studied Section Adjustments */
+        #studied {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #studied .container {
+            text-align: left;
+        }
+
+        #studied img {
+            max-width: 1000px;
+            margin-left: 20px;
+        }
+
+        /* Skills Section */
+        #skills {
+            text-align: center;
+        }
+
+        /* Projects Section Adjustments */
+        #projects .container {
+            text-align: top; /* Align text to top */
+        }
+
+        /* Contact Section Centered Text */
+        #contact {
+            text-align: center;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 500px;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        .popup img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .popup-close {
+            display: block;
+            text-align: right;
+            font-size: 20px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header">
+        <div class="Intro" style="font-size: large; margin-top: 35px;">
+            <!-- Logo -->
+            <div id="logo">
+                <span class="image avatar60"><img src="images/avatar.jpg" style="width: 75px; height: 75px; margin-top: -15px; border-radius: 35%;" /></span>
+                <h1 id="title">Kareem Khaled</h1>
+                <p>Automation Engineer<br />
+                    Aspiring AI and Data Scientist
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </p>
+            </div>
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="#Intro" id="Intro-link"><span class="icon solid fa-home">Intro</span></a></li>
+                    <li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+                    <li><a href="#studied" id="studied-link"><span class="icon solid fa-graduation-cap">Where I’ve Studied</span></a></li>
+                    <li><a href="#skills" id="skills-link"><span class="icon solid fa-tools">Skills & Expertise</span></a></li>
+                    <li><a href="#projects" id="projects-link"><span class="icon solid fa-project-diagram">Projects</span></a></li>
+                    <li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact Info.</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+<!-- Main -->
+    <div id="main">
+        <!-- Intro -->
+        <section id="Intro">
+            <div class="body">
+                <img src="images/intro.png" style="margin-top: -50px; opacity: 0.85;">
+                <header>
+                    <p>
+                        <br />
+                    </p>
+                    <h2 class="alt">I’m Kareem Khaled</h2>
+                    <p>I’m a specialized automation engineer in PLC programming, industrial communication,<br />
+                        and SCADA systems. Aspiring AI and Data Scientist for smart solutions.</p>
+                </header>
+            </div>
+        </section>
+
+        <!-- About Me -->
+        <section id="about" class="body">
+            <div class="container" style="text-align:justify; margin-top: 50px; justify-content: center;">
+                <header>
+                    <h2>About Me</h2>
+                </header>
+                <p>
+                    I'm Kareem Khaled! Recently dedicated Electrical Control Engineer seeking a challenging role
+                    to leverage expertise in PLC programming, SCADA systems, and process control to optimize industrial
+                    operations with a solid foundation in automation technologies and a keen interest in machine learning.<br />
+                    Seeking a position to contribute to the development and implementation of advanced automation solutions
+                    that enhance efficiency and productivity.<br />
+                    I am continuously seeking new challenges and opportunities to expand my knowledge.
+                </p>
+            </div>
+        </section>
+
+        <!-- Studied Section -->
+        <section id="studied">
+            <div class="container" style="text-align: center;">
+                <header>
+                    <h2>Where I’ve Studied</h2>
+                </header>
+                <div style="display: flex; align-items: center; justify-content: center; text-align: left;">
+                    <div>
+                        <h3>Shoubra Faculty of Engineering, Benha University</h3>
+                        <p>Bachelor's of Electrical and Control Engineering<br />
+                            Sep 2019 – Jan 2025<br/>
+                            <ul>
+                                <li>Industrial Control</li>
+                                <li>Automatic Control Theory</li>
+                                <li>Microcontroller and Intelligent Control</li>
+                                <li>Electrical Machines and Special Ones</li>
+                                <li>Power Systems and Protection</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <img src="images/university_logo.png" alt="University Logo" style="max-width: 200px; margin-left: 1px; margin-top: 140px;" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Expertise -->
+        <section id="skills" class="body">
+            <div class="container" style= "margin-top: 50px;">
+                <header>
+                    <h2>Skills & Expertise</h2>
+                </header>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+                    <div style="flex: 1; max-width: 400px; text-align: left;">
+                        <h3>Personal Strengths</h3>
+                        <ul>
+                            <li>Fast Learner</li>
+                            <li>Problem Solver</li>
+                            <li>Driven & Ambitious</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1; max-width: 400px; text-align: left;">
+                        <h3>What I Offer</h3>
+                        <ul>
+                            <li>Classic Control Solutions</li>
+                            <li>Professional PLC Programming</li>
+                            <li>SCADA Systems & HMI Design</li>
+                            <li>Seamless Industrial Communication Solutions</li>
+                            <li>IIOT Integration</li>
+                            <li>Data Processing & Visualization</li>
+                        </ul>
+                    </div>
+                </div>            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="body">
+            <div class="container" style= "margin-top: 50px;">
+                <header>
+                    <h2>Projects</h2>
+                </header>
+                <div class="row" style="display: flex;">
+                    <div class="col-4 col-12-mobile" style=" margin-left: 15%;">
+                        <a href="#" class="project" data-project="project1">
+                            <img src="images/Colormixer.webp" alt="Project 1"  style="width: 300px; height: 175px;"/>
+                            <h3>Color Mixer</h3>
+                        </a>
+                    </div>
+                    <div class="col-4 col-12-mobile">
+                        <a href="#" class="project" data-project="project2">
+                            <img src="images/Elevator.webp" alt="Project 2"  style="width: 300px; height: 175px;"/>
+                            <h3>Elevator</h3>
+                        </a>
+                    </div>
+                    <div class="col-4 col-12-mobile" style=" margin-left: 25%;">
+                        <a href="#" class="project" data-project="project3">
+                            <img src="images/Sorting.jpeg" alt="Project 3"  style="width: 300px; height: 175px;"/>
+                            <h3>Sorting By Size</h3>
+                        </a>
+                    </div>
+                    <div class="col-4 col-12-mobile">
+                        <a href="#" class="project" data-project="project4">
+                            <img src="images/Pumps.jpeg" alt="Project 4"  style="width: 300px; height: 175px;" />
+                            <h3>Water Lifting Plant</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container" style= "margin-top: 50px;">
+                <header>
+                    <h2>Contact Me</h2>
+                </header>
+                <div>
+                    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:kareem.kh.elzaidya@gmail.com" target="_blank">kareem.kh.elzaidya@gmail.com</a></li>
+                    <p><i class="fas fa-phone"></i> WhatsApp & Phone: <a href="https://wa.me/201552890650" target="_blank">+201552890650</a></li>
+                    <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/kareem-kh-elzaidya" target="_blank">Kareem Khaled</a></li>
+                    <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/kareemkhaled981" target="_blank">Kareem Khaled</a></li>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.querySelectorAll('.project').forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                var projectId = e.currentTarget.getAttribute('data-project');
+                openPopup(projectId);
+            });
+        });
+
+        function openPopup(projectId) {
+            // Here you can implement code to open a specific project popup
+            console.log('Open popup for project:', projectId);
+        }
+    </script>
+</body>
+</html>
